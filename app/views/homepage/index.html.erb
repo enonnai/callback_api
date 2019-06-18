@@ -1,3 +1,39 @@
 <h1>make it cheaper</h1>
-
 <h3>Welcome to the new, fairer way to switch your business utilities</h3>
+<br>
+<h3>Submit your contact details for a callback:</h3>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+  <%= bootstrap_form_for("/", method: "post", :class => 'form-inline') do %>
+		<div class="form-group">
+      <%= label_tag 'account_name', 'Account name' %>
+      <%= text_field_tag :account_name,params[:account_name], class: 'form-control', autofocus: true %>
+    </div>
+    <div class="form-group">
+      <%= label_tag 'partner_name', 'Partner name' %>
+      <%= text_field_tag :partner_name,params[:partner_name], class: 'form-control', autofocus: true %>
+    </div>
+    <div class="form-group">
+      <%= label_tag 'first_name_last_name', 'First name + Last name (separated by a space)' %>
+      <%= text_field_tag :first_name_last_name,params[:first_name_last_name], class: 'form-control', autofocus: true %>
+    </div>
+    <div class="form-group">
+      <%= label_tag 'business_name', 'Business name' %>
+      <%= text_field_tag :business_name,params[:business_name], class: 'form-control', autofocus: true %>
+    </div>
+    <div class="form-group">
+      <%= label_tag 'telephone_number', 'Telephone number (must be a valid UK number)' %>
+      <%= text_field_tag :telephone_number,params[:telephone_number], class: 'form-control', autofocus: true %>
+    </div>
+    <div class="form-group">
+      <%= label_tag 'email', 'Email' %>
+      <%= text_field_tag :email,params[:email], class: 'form-control', autofocus: true %>
+    </div>
+    <%= submit_tag "Submit", method: "post", class: 'btn btn-default btn-lg btn-submit' %>
+  <% end %>
+</div>

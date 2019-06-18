@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap', '>= 4.3.1'
+gem 'bootstrap_form', '>= 4.2.0'
 gem 'execjs'
 gem 'httparty'
 gem 'jquery-rails'
