@@ -6,34 +6,36 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
+<% if flash.now[:errors] %>
+  <ul class="error_list">
+  <% flash.now[:errors].each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+
 
 <div class="container">
-  <%= bootstrap_form_for("/", method: "post", :class => 'form-inline') do %>
+  <%= bootstrap_form_for("/", method: "post", :class => 'form-inline') do |f| %>
 		<div class="form-group">
-      <%= label_tag 'account_name', 'Account name' %>
-      <%= text_field_tag :account_name,params[:account_name], class: 'form-control', autofocus: true %>
+      <%= f.text_field :account_name, class: 'form-control', autofocus: true %>
     </div>
     <div class="form-group">
-      <%= label_tag 'partner_name', 'Partner name' %>
-      <%= text_field_tag :partner_name,params[:partner_name], class: 'form-control', autofocus: true %>
+      <%= f.text_field :partner_name, class: 'form-control', autofocus: true %>
     </div>
     <div class="form-group">
-      <%= label_tag 'first_name_last_name', 'First name + Last name (separated by a space)' %>
-      <%= text_field_tag :first_name_last_name,params[:first_name_last_name], class: 'form-control', autofocus: true %>
+      <%= f.text_field :first_name_last_name, class: 'form-control', autofocus: true %>
     </div>
     <div class="form-group">
-      <%= label_tag 'business_name', 'Business name' %>
-      <%= text_field_tag :business_name,params[:business_name], class: 'form-control', autofocus: true %>
+      <%= f.text_field :business_name, class: 'form-control', autofocus: true %>
     </div>
     <div class="form-group">
-      <%= label_tag 'telephone_number', 'Telephone number (must be a valid UK number)' %>
-      <%= text_field_tag :telephone_number,params[:telephone_number], class: 'form-control', autofocus: true %>
+      <%= f.text_field :telephone_number, class: 'form-control', autofocus: true %>
     </div>
     <div class="form-group">
-      <%= label_tag 'email', 'Email' %>
-      <%= text_field_tag :email,params[:email], class: 'form-control', autofocus: true %>
+      <%= f.text_field :email, class: 'form-control', autofocus: true %>
     </div>
-    <%= submit_tag "Submit", method: "post", class: 'btn btn-default btn-lg btn-submit' %>
+    <%= f.submit "Submit", method: "post", class: 'btn btn-default btn-lg btn-submit' %>
   <% end %>
 </div>

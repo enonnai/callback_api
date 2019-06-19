@@ -2,3 +2,13 @@
 /*
  *= require rails_bootstrap_forms
  */
+ ul.error_list {
+  background: #ff9999;
+  padding: 20px;
+ }
+
+ ul li {
+  background: #ffe5e5;
+  padding: 5px;
+  margin-left: 35px;
+}
