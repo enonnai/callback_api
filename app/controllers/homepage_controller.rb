@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class HomepageController < ApplicationController
   include HTTParty
 
@@ -6,14 +8,14 @@ class HomepageController < ApplicationController
 
   def create
     response = HTTParty.post('http://mic-leads.dev-test.makeiteasy.com/api/v1/create',
-    :body => { :access_token => ENV['LEAD_API_ACCESS_TOKEN'],
-               :pGUID => '-5584-4506-9c6f-5a65e14bfd08',
-               :pAccName => '',
-               :pPartner => '',
-               :name => 'Joajdoajof',
-               :business_name => '',
-               :telephone_number => '089955857',
-               :email => 'guybrushtesterexample.com'
+    :body => { :access_token =>     ENV['LEAD_API_ACCESS_TOKEN'],
+               :pGUID =>            SecureRandom.uuid,
+               :pAccName =>         'Account',
+               :pPartner =>         'Partner',
+               :name =>             params["contact_form"][:first_name_last_name],
+               :business_name =>    params["contact_form"][:business_name],
+               :telephone_number => params["contact_form"][:telephone_number],
+               :email =>            params["contact_form"][:email]
              },
     :headers => { 'Content-Type' => 'application/x-www-form-urlencoded' } )
 
