@@ -18,8 +18,13 @@
   </head>
 
   <body>
-
-    <%= yield %>
-
+    <div class="navbar-container">
+    	<div class="row">
+    		<div class="col-md-12">
+    			<%= render 'shared/nav' %>
+    			<%= yield %>
+    		</div>
+    	</div>
+    </div>
   </body>
 </html>

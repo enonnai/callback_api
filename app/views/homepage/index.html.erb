@@ -1,12 +1,12 @@
-<h1>make it cheaper</h1>
-<h3>Welcome to the new, fairer way to switch your business utilities</h3>
-<br>
+<div class="under-nav-text">
+  <p> ..Welcome to the new, fairer way to switch your business utilities.</p>
+</div>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <% if flash.now[:errors] %>
-  <div class="container">
+  <div class="error-container">
     <ul class="error_list">
       <% flash.now[:errors].each do |message| %>
       <li><%= message %></li>
@@ -17,11 +17,15 @@
       <li><%= flash.now[:message] %></li>
     </ul>
   </div>
+  <br>
 <% end %>
 
-<h2>Submit your contact details for a callback:</h2>
-<br>
 <div class="container">
+  <div class="form-title">
+    Submit your contact details for a callback now!
+  </div>
+  <br>
+  <br>
   <%= bootstrap_form_for("contact_form", method: "post", :class => 'form-inline') do |f| %>
     <div class="form-group">
       <%= f.text_field :first_name_last_name, class: 'form-control', autofocus: true %>

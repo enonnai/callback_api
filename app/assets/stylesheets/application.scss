@@ -2,9 +2,23 @@
 /*
  *= require rails_bootstrap_forms
  */
+ .under-nav-text {
+  border-radius: 25px;
+  padding: 20px;
+  margin-top: -27px;
+  font-size: 18px;
+  font-style: oblique;
+ }
+
+ .form-title {
+  font-size: 20px;
+  text-align: center;
+ }
+
  ul.error_list {
   background: #ff9999;
   padding: 20px;
+  border-radius: 25px;
  }
 
  ul li {
@@ -16,10 +30,45 @@
 ul.success_message {
  background: #23d140;
  padding: 20px;
+ border-radius: 25px;
 }
 
 ul.success_message li {
  background: #d3f9d1;
  padding: 5px;
  margin-left: 35px;
+}
+
+.nav.navbar-nav li a {
+  background-color: #64cfd3;
+  color: white;
+}
+
+.container {
+  background-color: #adf1ed;
+  border-radius: 25px;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.error_container {
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.navbar .container-fluid {
+  background-color: #64cfd3;
+  color: white;
+  justify-content: unset;
+}
+
+.navbar-header a.navbar-brand {
+  font-weight: normal;
+  font-size: 25px;
+  background-color: #adf1ed;
+  color: black;
+}
+
+body {
+  background-color: #60e6df;
 }
