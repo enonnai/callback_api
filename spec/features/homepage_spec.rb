@@ -9,7 +9,7 @@ describe 'Homepage Feature Tests' do
 
   	it 'shows the company name' do
   		visit root_path
-  		expect(page).to have_content('make it cheaper')
+  		expect(page).to have_content('makeitcheaper')
   	end
   end
 end
