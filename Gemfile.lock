@@ -242,12 +242,11 @@ GEM
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.5)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.6.0)
-    vcr (5.0.0)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -294,7 +293,6 @@ DEPENDENCIES
   turbolinks (~> 5.0.0)
   tzinfo-data
   uglifier (~> 4.1, >= 4.1.20)
-  vcr (~> 5.0)
   web-console (>= 3.3)
   webmock (~> 3.5, >= 3.5.1)
 
